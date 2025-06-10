@@ -240,7 +240,7 @@ exports.requestPasswordReset = async (req, res) => {
     // Generate a reset token
     const resetToken = crypto.randomBytes(32).toString('hex');
     user.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
-    user.passwordResetExpires = Date.now() + 3600000; // 1 hour
+    user.passwordResetExpires = Date.now() + 120000; // 1 hour
 
     await user.save();
 
