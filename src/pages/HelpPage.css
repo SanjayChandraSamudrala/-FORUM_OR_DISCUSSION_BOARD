@@ -1,0 +1,227 @@
+.header-container {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(75, 85, 99, 0.2);
+  padding-bottom: 1.5rem;
+}
+
+.header-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.header-subtitle {
+  color: hsl(var(--muted-foreground));
+  font-size: 1.125rem;
+}
+
+.search-container {
+  position: relative;
+  max-width: 36rem;
+  margin: 2rem auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+}
+
+.search-input::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.help-categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .help-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.category-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: auto;
+  padding: 2.5rem 1.5rem;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  color: hsl(var(--foreground));
+}
+
+.category-button:hover {
+  background-color: hsl(var(--muted));
+}
+
+.category-icon {
+  color: #a78bfa;
+  margin-bottom: 0.75rem;
+}
+
+.category-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.category-subtitle {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.help-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .help-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.content-section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: hsl(var(--foreground));
+}
+
+.faq-item {
+  background-color: hsl(var(--card));
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  overflow: hidden;
+  color: hsl(var(--foreground));
+}
+
+.accordion-trigger {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  text-align: left;
+  padding: 1.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  color: hsl(var(--muted-foreground));
+  padding: 0 1.25rem 1.25rem;
+  line-height: 1.6;
+}
+
+.help-category-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--foreground));
+  transition: background-color 0.2s ease;
+}
+
+.help-category-button:hover {
+  background-color: hsl(var(--muted));
+}
+
+.help-category-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.help-category-icon {
+  color: #a78bfa;
+}
+
+.help-category-arrow {
+  color: #9ca3af;
+}
+
+.support-card {
+  margin-top: 2rem;
+  background-color: hsl(var(--card));
+  padding: 1.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.support-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--foreground));
+}
+
+.support-text {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.support-button {
+  background-color: #a78bfa;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.support-button:hover {
+  background-color: #8b5cf6;
+}
+
+.chevron-icon {
+  transition: transform 0.3s ease;
+}
+
+[data-state="open"] .chevron-icon {
+  transform: rotate(180deg);
+}
