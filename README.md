@@ -98,5 +98,3 @@ Contributions and feature requests are welcome!
 This project is licensed under the MIT License.
 
 ---
-
-Need this as a downloadable file or want badges (Node, React, License, Vercel, etc.) added at the top? Let me know — I can generate that too.
