@@ -4,16 +4,6 @@
 
 A scalable and responsive discussion forum built with **MongoDB**, **Express.js**, **React**, and **Node.js**. It allows users to register, create threads, reply to discussions, upvote content, and more. Designed with modular components, REST APIs, and responsive layouts.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb" />
-</p>
-
 ---
 
 ## 💪 Features
@@ -24,7 +14,7 @@ A scalable and responsive discussion forum built with **MongoDB**, **Express.js*
 * 📆 **Category Filtering**: Organize topics by categories or tags.
 * 💬 **Live Interactions**: Auto-refresh UI after actions using state management.
 * 🏛️ **Admin Controls**: Moderate threads, delete inappropriate content.
-* 🎨 **Responsive UI**: Optimized for desktop.
+* 🎨 **Responsive UI**: Optimized for desktop, tablet, and mobile devices.
 
 ---
 
@@ -113,4 +103,4 @@ $ npm run dev
 
 Frontend: [http://localhost:5173](http://localhost:5173)
 Backend API: [http://localhost:5000/api](http://localhost:5000/api)
-```
+
