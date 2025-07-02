@@ -24,7 +24,7 @@ A scalable and responsive discussion forum built with **MongoDB**, **Express.js*
 * 📆 **Category Filtering**: Organize topics by categories or tags.
 * 💬 **Live Interactions**: Auto-refresh UI after actions using state management.
 * 🏛️ **Admin Controls**: Moderate threads, delete inappropriate content.
-* 🎨 **Responsive UI**: Optimized for desktop, tablet, and mobile devices.
+* 🎨 **Responsive UI**: Optimized for desktop.
 
 ---
 
@@ -113,16 +113,4 @@ $ npm run dev
 
 Frontend: [http://localhost:5173](http://localhost:5173)
 Backend API: [http://localhost:5000/api](http://localhost:5000/api)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
----
-
-## 👤 Author
-
-**Sanjay Chandra**
-[LinkedIn](https://linkedin.com) *(Update this link with your real profile)*
+```
