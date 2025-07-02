@@ -3,6 +3,28 @@
 
 A full-featured forum application built with the MERN stack (MongoDB, Express.js, React, Node.js).
 
+<h1 align="center">🗣️ ConnectForum</h1>
+<h3 align="center">A MERN Stack Discussion Platform</h3>
+
+<p align="center">
+  A full-featured forum application built with the MERN stack (MongoDB, Express.js, React, Node.js).
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript" />
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb" />
+</p>
+
+---
+
+## 📁 Project Structure
+
+
 ## Project Structure
 
 ```
@@ -86,17 +108,36 @@ npm run dev
 The frontend will be available at http://localhost:5173
 The backend API will be available at http://localhost:5000/api
 
-## Features
+✨ Features
+🔐 User authentication (register, login, profile management)
 
-- User authentication (register, login, profile management)
-- Create and manage discussion threads
-- Reply to threads and vote on content
-- Category-based organization
-- Responsive design for mobile and desktop
+💬 Create and manage discussion threads
 
-## Technologies Used
+🗳️ Reply to threads and vote on content
 
-- **Frontend**: React, TypeScript, Tailwind CSS, Shadcn UI
-- **Backend**: Node.js, Express.js, MongoDB with Mongoose
-- **Authentication**: JWT (JSON Web Tokens)
-- **Build Tools**: Vite
+📂 Category-based organization
+
+📱 Responsive design for mobile and desktop
+
+🛠️ Technologies Used
+🌐 Frontend
+React
+
+TypeScript
+
+Tailwind CSS
+
+Vite
+
+Shadcn UI
+
+🧪 Backend
+Node.js
+
+Express.js
+
+MongoDB
+
+Mongoose
+
+JWT Authentication
