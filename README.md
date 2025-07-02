@@ -14,7 +14,7 @@ A scalable and responsive discussion forum built with **MongoDB**, **Express.js*
 * 📆 **Category Filtering**: Organize topics by categories or tags.
 * 💬 **Live Interactions**: Auto-refresh UI after actions using state management.
 * 🏛️ **Admin Controls**: Moderate threads, delete inappropriate content.
-* 🎨 **Responsive UI**: Optimized for desktop, tablet, and mobile devices.
+* 🎨 **Responsive UI**: Optimized for desktop.
 
 ---
 
