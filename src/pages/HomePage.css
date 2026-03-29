@@ -1,0 +1,81 @@
+.home-image-container {
+  width: 100%;
+  max-width: 32rem;
+  margin-bottom: 2rem;
+}
+
+.home-image {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+.threads-link {
+  background-color: rgb(233, 213, 255);
+  color: rgb(107, 33, 168);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.threads-link:hover {
+  background-color: rgb(216, 180, 254);
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-card, .search-bar, .post-input {
+  background-color: hsl(var(--card));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+}
+
+.post-input-area {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
+}
+
+.post-input-content, .post-input-content * {
+  color: hsl(var(--foreground)) !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.post-input-content.empty:before {
+  color: hsl(var(--muted-foreground));
+  opacity: 1;
+  font-weight: 400;
+}
+
+.reply-textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+  opacity: 1;
+}
+
+/* Make thread action buttons black on hover in light theme */
+:root .thread-action-btn:hover {
+  color: #111 !important;
+}
+
+.dark .thread-action-btn:hover {
+  color: #fff !important;
+}
+
+/* Make emoji toolbar buttons black on hover in light theme */
+:root .emoji-toolbar button:hover {
+  color: #111 !important;
+}
+
+.dark .emoji-toolbar button:hover {
+  color: #fff !important;
+}

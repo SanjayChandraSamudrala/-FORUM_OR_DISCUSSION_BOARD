@@ -1,0 +1,130 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-section-title,
+.contact-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: hsl(var(--foreground));
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  color: hsl(var(--foreground));
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-input,
+.form-textarea {
+  background-color: hsl(var(--card)) !important;
+  color: hsl(var(--card-foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: hsl(var(--primary)) !important;
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2) !important;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.form-submit {
+  background-color: #7c3aed !important;
+  color: white !important;
+  width: 100%;
+  padding: 0.75rem !important;
+  border-radius: 0.5rem !important;
+  transition: background-color 0.2s;
+}
+
+.form-submit:hover {
+  background-color: #6d28d9 !important;
+}
+
+.form-submit:disabled {
+  background-color: #4c1d95 !important;
+  cursor: not-allowed;
+}
+
+.contact-space {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid hsl(var(--border));
+}
+
+.contact-icon-container {
+  background-color: #374151;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.contact-icon {
+  color: #7c3aed;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.contact-info-title {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-text {
+  color: #9ca3af;
+}
+
+.hours-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+}
+
+.hours-title {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.hours-text {
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
