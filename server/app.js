@@ -1,5 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dns = require('dns');
+
+// Fix for Node.js >= 20/22 DNS resolution issues with MongoDB Atlas in cloud environments
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 const cors = require('cors');
 const dotenv = require('dotenv');
 const postRoutes = require('./routes/postRoutes');
