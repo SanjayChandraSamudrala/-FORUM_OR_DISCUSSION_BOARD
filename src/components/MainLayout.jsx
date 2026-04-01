@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "./layout/Sidebar";
 import Topbar from "./layout/Topbar";
 import Rightbar from "./layout/Rightbar";
 import "./MainLayout.css";
 
 const MainLayout = ({ children, initialIsLoggedIn = false }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    initialIsLoggedIn || Boolean(localStorage.getItem('token'))
+  );
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    setIsLoggedIn(Boolean(token));
+  }, []);
 
   const handleLoginStatus = (status) => {
     setIsLoggedIn(status);

@@ -15,28 +15,14 @@ export const useAuth = () => {
 
       const token = localStorage.getItem('token');
       const storedUser = localStorage.getItem('user');
-      const loginTimestamp = localStorage.getItem('loginTimestamp');
-      const lastActivityTimestamp = localStorage.getItem('lastActivityTimestamp');
-      const currentTime = Date.now();
-      const fiveMinutes = 5 * 60 * 1000; // 5 minutes in milliseconds
 
-      console.log('Auth Check Debug:');
-      console.log('Current Time:', new Date(currentTime).toLocaleString());
-      console.log('Last Activity:', lastActivityTimestamp ? new Date(parseInt(lastActivityTimestamp)).toLocaleString() : 'No activity');
-      console.log('Time Difference:', lastActivityTimestamp ? (currentTime - parseInt(lastActivityTimestamp)) / 1000 + ' seconds' : 'N/A');
-
-      // Check if user has been inactive for more than 5 minutes
-      if (lastActivityTimestamp && (currentTime - parseInt(lastActivityTimestamp, 10) > fiveMinutes)) {
-        console.log('User inactive for more than 5 minutes. Logging out.');
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        localStorage.removeItem('loginTimestamp');
-        localStorage.removeItem('lastActivityTimestamp');
+      // Keep the session persistent in localStorage (no forced 5-min inactivity logout)
+      if (!token || !storedUser) {
         setAuthState({
           user: null,
           isLoggedIn: false,
           isLoading: false,
-          error: 'Session expired due to inactivity'
+          error: null
         });
         return;
       }
@@ -75,24 +61,20 @@ export const useAuth = () => {
       }
     };
 
-    // Update last activity timestamp on user interaction
+    // (Optional) Keep last activity timestamp updated for analytics/debug only
     const updateLastActivity = () => {
-      const newTimestamp = Date.now(); // Get timestamp as a number
-      console.log('Activity detected, updating timestamp:', new Date(newTimestamp).toLocaleString());
-      localStorage.setItem('lastActivityTimestamp', newTimestamp.toString()); // Store as string in localStorage
+      const newTimestamp = Date.now();
+      localStorage.setItem('lastActivityTimestamp', newTimestamp.toString());
     };
 
-    // Add event listeners for user activity
     window.addEventListener('mousemove', updateLastActivity);
     window.addEventListener('keydown', updateLastActivity);
     window.addEventListener('click', updateLastActivity);
     window.addEventListener('scroll', updateLastActivity);
 
-    // Set initial last activity timestamp
+    // Set initial last activity timestamp if logged in
     if (localStorage.getItem('token')) {
-      const initialTimestamp = Date.now().toString();
-      console.log('Setting initial activity timestamp:', new Date(initialTimestamp).toLocaleString());
-      localStorage.setItem('lastActivityTimestamp', initialTimestamp);
+      localStorage.setItem('lastActivityTimestamp', Date.now().toString());
     }
 
     checkAuthStatus();

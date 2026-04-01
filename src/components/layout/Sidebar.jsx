@@ -19,6 +19,8 @@ const Sidebar = ({ isLoggedIn }) => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       setCurrentUser(JSON.parse(storedUser));
+    } else {
+      setCurrentUser(null);
     }
   }, [isLoggedIn]);
 
@@ -71,7 +73,8 @@ const Sidebar = ({ isLoggedIn }) => {
   }, []);
 
   const handleAuthLink = (e, destination, actionName) => {
-    if (!isLoggedIn) {
+    const activeLogin = Boolean(isLoggedIn || currentUser);
+    if (!activeLogin) {
       e.preventDefault();
       toast({
         title: "Authentication Required",
